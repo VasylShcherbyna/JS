@@ -1,0 +1,110 @@
+.box-nav {
+  display: flex;
+  align-items: center; /*Вирівнювання контейнерів по центру*/
+  background: var(--color-background--container);
+}
+.link-main {
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus,
+  &:target {
+    color: var(--color-focus);
+  }
+  &:active {
+    color: tomato;
+  }
+}
+.list .link-main {
+  display: block;
+  padding: 32px 0;
+}
+.nav-ul {
+  font-weight: 500; /* Жирное начертание */
+  font-size: 14px;
+  line-height: 1.19;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+}
+.nav-link {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+}
+
+.list {
+  display: flex;
+
+  .item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .current {
+    color: var(--akcent-color);
+  }
+}
+
+.link-mail {
+  display: block;
+}
+.icon-mail {
+  fill: currentColor;
+  margin-right: 10px;
+}
+.icon-tel {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.list-contakty {
+  display: flex;
+  margin-left: auto;
+}
+.list-mail {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+.list-tel {
+  align-items: center;
+}
+
+.header-li a {
+  list-style-type: none;
+  background: var(--color-background--container);
+  color: var(--title-text-color);
+}
+.contakty a {
+  color: var(--primary-text-color);
+}
+.header-li {
+  list-style-type: none;
+  font-style: normal;
+}
+.header-nav {
+  display: flex;
+}
+.list-contakty .link-main {
+  @extend %align;
+  //display: flex;
+  padding: 40px 0;
+  height: 16px;
+ // justify-content: center;
+ // align-items: center;
+}

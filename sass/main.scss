@@ -1,0 +1,30 @@
+//BASE
+@import "./base/common";
+@import "./base/container";
+
+//UTILS
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/placehlder";
+@import './utils/mixin';
+
+//COMPONENTS
+@import "./components/logo-studio";
+@import "./components/main-li";
+@import "./components/text-title";
+@import "./components/text-p";
+@import "./components/social-list-icon";
+@import "./components/subtitle";
+@import "./components/container-button";
+
+//LAYOUT
+@import "./layaut/aside";
+@import "./layaut/header";
+@import "./layaut/list-features";
+@import "./layaut/list-desc";
+@import "./layaut/doing-section";
+@import "./layaut/our-team";
+@import "./layaut/customers-section";
+@import "./layaut/container-footer";
+@import "./layaut/container-form";
+@import "./layaut/modal-icon";

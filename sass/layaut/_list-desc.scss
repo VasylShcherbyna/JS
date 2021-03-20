@@ -1,0 +1,7 @@
+.list-desc {
+  display: flex;
+  .main-li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+

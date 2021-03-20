@@ -1,0 +1,45 @@
+.title-post {
+  display: block;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+.doing-section {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+.box-img {
+  display: flex;
+}
+.box-img li:not(:last-child) {
+  margin-right: 30px;
+}
+.list-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.thumb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+.label {
+  @include font($fs: 14px, $lh: 1.14px);
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}

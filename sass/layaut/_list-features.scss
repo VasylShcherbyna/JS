@@ -1,0 +1,20 @@
+.list-features-svg {
+  display: flex;
+}
+.list-features:not(:last-child) {
+  margin-right: 30px;
+}
+.features-icon {
+  @extend %align;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  margin-bottom: 30px;
+}
+.icon {
+  width: 70px;
+  height: 70px;
+}
+.features {
+  padding: 94px 0;
+}

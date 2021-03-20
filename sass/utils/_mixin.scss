@@ -1,0 +1,10 @@
+@mixin font($fw: bold, $fs: 16px, $lh: 1.88) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+@mixin logo($w, $h, $f) {
+  width: $w;
+  height: $h;
+  fill: $f;
+}

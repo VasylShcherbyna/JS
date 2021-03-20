@@ -1,0 +1,205 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 528px;
+  min-height: 581px;
+  padding: 40px 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.icon-close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  fill: #000000;
+  transform: translate(-50%, -50%);
+  .modal-close-btn:focus &,
+  .modal-close-btn:hover & {
+    fill: var(--akcent-color);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.box-modal {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form-input {
+  padding: 12px 42px;
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus,
+  &:hover {
+    outline: transparent;
+    border: 1px solid #2196f3;
+  }
+  &:hover ~ .form-icon,
+  &:focus ~ .form-icon {
+    fill: #2196f3;
+  }
+}
+
+.title-contact-form {
+  @include font($fs: 20px, $lh: 1.15);
+  display: block;
+  margin-bottom: 30px;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.box-name {
+  position: relative;
+  margin-bottom: 10px;
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+}
+.modal-box-mail {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.box-tel {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 20px;
+  resize: none;
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.label-style {
+  @include font($fw: normal, $fs: 12px, $lh: 1.17);
+  text-align: left;
+  margin-bottom: 4px;
+  font-style: normal;
+  letter-spacing: 0.01em;
+}
+.checkbox-label {
+  @include font($fw: normal, $fs: 14px, $lh: 1.171);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  align-items: center;
+  font-style: normal;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.link-checkbox {
+  margin-left: 5px;
+  color: #2196f3;
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:checked + .checkbox-icon {
+    background-color: #2196f3;
+    background-image: url(../img/check.svg);
+    background-size: contain;
+    border-radius: 2px;
+    outline: none;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover + .checkbox-icon,
+  &:focus + .checkbox-icon {
+    border: 2px solid var(--akcent-color);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.checkbox-icon {
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-color: #212121;
+  border: 2px solid #212121;
+  cursor: pointer;
+}
+
+.modal-submit {
+  @extend %value;
+  //display: block;
+  margin: 0 auto;
+  //align-items: center;
+  //text-align: center;
+  padding: 10px 55px;
+  width: 200px;
+  height: 50px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

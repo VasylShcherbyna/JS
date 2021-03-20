@@ -1,0 +1,18 @@
+.logo-link {
+  @include font($fs: 26px, $lh: 1.19);
+  font-family: var(--font-family);
+  letter-spacing: 0.03em;
+  color: var(--color-focus);
+}
+.box-nav .logo-link {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+}
+
+.studio {
+  @include font($fs: 26px, $lh: 1.19);
+  font-family: var(--font-family);
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}

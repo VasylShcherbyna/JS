@@ -1,0 +1,67 @@
+.customers-section {
+  padding: 94px 0;
+}
+.customers-title {
+  @include font($fs: 36px, $lh: 1.16);
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.list-customers {
+  display: flex;
+}
+.customers:not(:last-child) {
+  margin-right: 30px;
+}
+.customers {
+  width: 170px;
+  height: 90px;
+}
+.logo-1 {
+  @include logo(44px, 49px, #afb1b8);
+}
+.logo-2 {
+  @include logo(40px, 52px, #afb1b8);
+}
+.logo-3 {
+  @include logo(41px, 42px, #afb1b8);
+}
+.logo-4 {
+  @include logo(80px, 42px, #afb1b8);
+}
+.logo-5 {
+  @include logo(59px, 47px, #afb1b8);
+}
+.logo-6 {
+  @include logo(88px, 45px, #afb1b8);
+}
+
+.link-customers {
+  @extend %align;
+  //display: flex;
+  //justify-content: center;
+  // align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid#AFB1B8;
+
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .icon-customers {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover .icon-customers,
+  &:focus .icon-customers {
+    fill: var(--color-focus);
+    border-color: var(--color-focus);
+  }
+  &:hover,
+  &:focus {
+    border-color: var(--color-focus);
+  }
+}
