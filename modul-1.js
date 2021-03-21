@@ -1,2 +1,2 @@
 const a = 'World';
-console.log(25);
+console.log(a);
